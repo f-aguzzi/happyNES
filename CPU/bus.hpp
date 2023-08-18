@@ -21,16 +21,21 @@
 
 class Bus
 {
+    // Attached devices
     private:
-    Memory memory;
-    PPU ppu;
-    Cartridge cartridge;
+        Memory memory;  // Sytem RAM
+        PPU ppu;    // Picture Processing Unit
+        Cartridge cartridge;    // The game cartridge
+
+    // Constructor and destructor
+    public:
+        Bus();
+        ~Bus();
+
+    // Reading and writing
+    public:
+        byte readBus(hword address);
+        void writeBus(hword address, byte data);
 
     public:
-    Bus();
-    ~Bus();
-
-    public:
-    byte readBus(hword address);
-    void writeBus(hword address, byte data);
 };

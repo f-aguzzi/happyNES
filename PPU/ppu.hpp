@@ -5,9 +5,11 @@
 
 class PPU
 {
-
+    
 
     public:
-    byte CPUbusRead(hword address);
-    void CPUbusWrite(hword address, byte data);
+        byte CPUbusRead(hword address);
+        void CPUbusWrite(hword address, byte data);
+        byte PPUread(hword address);
+        void PPUwrite(hword address, byte data);
 };
