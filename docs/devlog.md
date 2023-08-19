@@ -23,3 +23,9 @@ running.
 My idea is to make this a WASM project, and have the PPU write the image in an
 HTML canvas. I don't want to mess with graphics libraries unless it's strictly
 necessary.
+
+# August 19, 2023
+
+The CPU emulator doesn't cut it. I had to take away all the clock cycle
+simulation system. Going instruction by instruction is enough, apparently,
+to get a working emulator.
